@@ -17,6 +17,7 @@ export default defineConfig({
       { text: 'MCP', link: '/mcp/' },
       { text: 'Vue', link: '/vue/' },
       { text: 'Python ライブラリ', link: '/python-libs/' },
+      { text: 'CI/CD', link: '/cicd/' },
     ],
 
     sidebar: [
@@ -28,6 +29,13 @@ export default defineConfig({
           { text: 'MCP', link: '/mcp/' },
           { text: 'Vue', link: '/vue/' },
           { text: 'Python ライブラリ', link: '/python-libs/' },
+        ],
+      },
+      {
+        text: 'GitHub Actions / CI/CD',
+        items: [
+          { text: '概要', link: '/cicd/' },
+          { text: 'このサイトが公開されるまで', link: '/cicd/pages-deploy' },
         ],
       },
     ],

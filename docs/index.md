@@ -29,4 +29,7 @@ features:
   - title: Python ライブラリ
     details: 気になったライブラリを試し、使いどころをまとめる「ライブラリ図鑑」。
     link: /python-libs/
+  - title: GitHub Actions / CI/CD
+    details: このサイトの自動公開の仕組みを教材に、CI/CD とワークフローの書き方を学ぶ。
+    link: /cicd/
 ---
