@@ -33,3 +33,9 @@ features:
     details: このサイトの自動公開の仕組みを教材に、CI/CD とワークフローの書き方を学ぶ。
     link: /cicd/
 ---
+
+## 新着記事
+
+| 日付 | テーマ | 記事 |
+|---|---|---|
+| 2026-10-06 | GitHub Actions / CI/CD | [このサイトが公開されるまで](./cicd/pages-deploy) |
