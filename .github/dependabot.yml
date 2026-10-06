@@ -1,0 +1,26 @@
+# Dependabot version updates の設定。
+# 依存パッケージやアクションに新しいバージョンが出たら、更新用の PR を自動で作る。
+version: 2
+updates:
+  # npm パッケージ（package.json / package-lock.json）
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+
+  # GitHub Actions のアクション（.github/workflows/*.yml の uses:）
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    # アクションの更新は1つの PR にまとめて届くようにする
+    groups:
+      github-actions:
+        patterns:
+          - "*"
