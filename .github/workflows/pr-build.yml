@@ -1,0 +1,35 @@
+# main 向けの PR が作られたり更新されたりしたら、サイトがビルドできるかだけを確かめる。
+# デプロイは行わない（公開は main への push 時に deploy.yml が担当する）。
+name: Build check
+
+on:
+  pull_request:
+    branches: [main]
+
+# ビルドするだけなので、リポジトリを読む権限だけで足りる
+permissions:
+  contents: read
+
+# 同じ PR に続けて push された場合は、古いチェックを止めて最新のものだけを実行する
+concurrency:
+  group: pr-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  docs-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with VitePress
+        run: npm run docs:build
