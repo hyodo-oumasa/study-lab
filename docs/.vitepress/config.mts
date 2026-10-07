@@ -36,6 +36,7 @@ export default defineConfig({
         items: [
           { text: '概要', link: '/cicd/' },
           { text: 'このサイトが公開されるまで', link: '/cicd/pages-deploy' },
+          { text: 'Dependabot を導入して脆弱性を直すまで', link: '/cicd/dependabot' },
         ],
       },
     ],
