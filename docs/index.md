@@ -38,4 +38,5 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-07 | GitHub Actions / CI/CD | [Dependabot を導入して脆弱性を直すまで](./cicd/dependabot) |
 | 2026-10-06 | GitHub Actions / CI/CD | [このサイトが公開されるまで](./cicd/pages-deploy) |
