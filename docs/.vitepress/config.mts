@@ -37,6 +37,8 @@ export default defineConfig({
           { text: '概要', link: '/cicd/' },
           { text: 'このサイトが公開されるまで', link: '/cicd/pages-deploy' },
           { text: 'Dependabot を導入して脆弱性を直すまで', link: '/cicd/dependabot' },
+          { text: 'ブランチ保護（ルールセット）で main を守る', link: '/cicd/branch-protection' },
+          { text: 'PR の承認の仕組みと、AI が作る PR', link: '/cicd/pr-approval-and-ai' },
         ],
       },
     ],
