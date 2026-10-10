@@ -39,6 +39,8 @@ export default defineConfig({
           { text: 'Dependabot を導入して脆弱性を直すまで', link: '/cicd/dependabot' },
           { text: 'ブランチ保護（ルールセット）で main を守る', link: '/cicd/branch-protection' },
           { text: 'PR の承認の仕組みと、AI が作る PR', link: '/cicd/pr-approval-and-ai' },
+          { text: 'Python のテストと lint を CI で自動実行する', link: '/cicd/python-ci' },
+          { text: '通信するプログラムを、テストしやすく作る', link: '/cicd/testable-python' },
         ],
       },
     ],
