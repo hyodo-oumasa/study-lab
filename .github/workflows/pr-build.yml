@@ -21,6 +21,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          # VitePress は Git の履歴から各ページの最終更新日時を調べる。
+          # 初期設定では最新の 1 件しか取得しないため、履歴をすべて取得する。
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
