@@ -15,7 +15,7 @@ hero:
 
 features:
   - title: GH-300（GitHub Copilot）
-    details: GitHub Copilot の機能と使い方を、自分の理解でまとめたノート。
+    details: GitHub Copilot の認定試験に向けて、機能と使い方を 1 ページ 1 主題でまとめたノート。
     link: /gh-300/
   - title: 統計検定2級
     details: 記述統計から推定・検定・回帰まで。自分のデータと自作の例題で確かめる。
@@ -38,6 +38,7 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-10 | GH-300（GitHub Copilot） | [責任ある AI の 6 つの原則](./gh-300/03-responsible-ai-principles) |
 | 2026-10-10 | GitHub Actions / CI/CD | [通信するプログラムを、テストしやすく作る](./cicd/testable-python) |
 | 2026-10-10 | GitHub Actions / CI/CD | [Python のテストと lint を CI で自動実行する](./cicd/python-ci) |
 | 2026-10-09 | GitHub Actions / CI/CD | [PR の承認の仕組みと、AI が作る PR](./cicd/pr-approval-and-ai) |

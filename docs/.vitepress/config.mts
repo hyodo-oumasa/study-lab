@@ -32,6 +32,13 @@ export default defineConfig({
         ],
       },
       {
+        text: 'GH-300（GitHub Copilot）',
+        items: [
+          { text: '概要とページの一覧', link: '/gh-300/' },
+          { text: '03. 責任ある AI の 6 つの原則', link: '/gh-300/03-responsible-ai-principles' },
+        ],
+      },
+      {
         text: 'GitHub Actions / CI/CD',
         items: [
           { text: '概要', link: '/cicd/' },
