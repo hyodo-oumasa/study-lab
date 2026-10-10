@@ -62,7 +62,7 @@ GH-300 は、GitHub Copilot（開発者の作業を支援する AI ツール）�
 |---|---|---|
 | 10 | [プロンプトエンジニアリングの基本](./10-prompt-engineering-basics) | 公開済み |
 | 11 | コンテキスト設計とプロンプトの高度化 | 準備中 |
-| 12 | GitHub Copilot の仕組みとデータフロー | 準備中 |
+| 12 | [GitHub Copilot の仕組みとデータフロー](./12-copilot-data-flow) | 公開済み |
 
 ### 第 4 部：プライバシーと管理
 
