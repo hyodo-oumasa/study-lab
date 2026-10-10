@@ -37,6 +37,7 @@ export default defineConfig({
           { text: '概要とページの一覧', link: '/gh-300/' },
           { text: '03. 責任ある AI の 6 つの原則', link: '/gh-300/03-responsible-ai-principles' },
           { text: '10. プロンプトエンジニアリングの基本', link: '/gh-300/10-prompt-engineering-basics' },
+          { text: '12. GitHub Copilot の仕組みとデータフロー', link: '/gh-300/12-copilot-data-flow' },
         ],
       },
       {
