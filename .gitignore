@@ -10,3 +10,10 @@ docs/.vitepress/cache/
 
 # Claude Code のローカル設定（Mac 固有のパスを含む）
 .claude/
+
+# Python
+venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/

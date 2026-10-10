@@ -1,0 +1,85 @@
+# main 向けの PR が作られたり更新されたりしたら、Python のコードを検査する。
+# - python-lint: 書き方の検査（ruff）
+# - python-test: テスト（pytest）を、複数の OS と Python バージョンで実行
+# - python-ci:   上の 2 つの結果をまとめる。ブランチ保護の必須チェックにはこれを登録する
+name: Python CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# 同じ PR に続けて push された場合は、古いチェックを止めて最新のものだけを実行する
+concurrency:
+  group: python-ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Lint with ruff
+        run: ruff check .
+
+      - name: Check formatting with ruff
+        run: ruff format --check .
+
+  python-test:
+    strategy:
+      # 1 つの組み合わせが失敗しても、ほかの組み合わせは最後まで実行する
+      fail-fast: false
+      matrix:
+        # テストを動かす OS と Python バージョンは、ここで指定する
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.13", "3.14"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt -e .
+
+      - name: Test with pytest
+        run: pytest
+
+  python-ci:
+    # 前のジョブが失敗しても必ず実行する。スキップされた必須チェックは
+    # 「合格」として扱われるため、スキップさせずに自分で失敗を報告する。
+    if: always()
+    needs: [python-lint, python-test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check results
+        env:
+          LINT_RESULT: ${{ needs.python-lint.result }}
+          TEST_RESULT: ${{ needs.python-test.result }}
+        run: |
+          echo "python-lint: $LINT_RESULT"
+          echo "python-test: $TEST_RESULT"
+          if [ "$LINT_RESULT" != "success" ] || [ "$TEST_RESULT" != "success" ]; then
+            echo "lint またはテストが成功していません。"
+            exit 1
+          fi
