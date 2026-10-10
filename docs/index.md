@@ -38,6 +38,8 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-10 | GitHub Actions / CI/CD | [通信するプログラムを、テストしやすく作る](./cicd/testable-python) |
+| 2026-10-10 | GitHub Actions / CI/CD | [Python のテストと lint を CI で自動実行する](./cicd/python-ci) |
 | 2026-10-09 | GitHub Actions / CI/CD | [PR の承認の仕組みと、AI が作る PR](./cicd/pr-approval-and-ai) |
 | 2026-10-09 | GitHub Actions / CI/CD | [ブランチ保護（ルールセット）で main を守る](./cicd/branch-protection) |
 | 2026-10-07 | GitHub Actions / CI/CD | [Dependabot を導入して脆弱性を直すまで](./cicd/dependabot) |
