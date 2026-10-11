@@ -46,6 +46,7 @@ export default defineConfig({
         text: 'Claude Code',
         items: [
           { text: '概要とページの一覧', link: '/claude-code/' },
+          { text: '01. Claude Code とは何か', link: '/claude-code/01-what-is-claude-code' },
         ],
       },
       {

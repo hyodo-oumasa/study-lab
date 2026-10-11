@@ -38,6 +38,7 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-11 | Claude Code | [Claude Code とは何か](./claude-code/01-what-is-claude-code) |
 | 2026-10-11 | GH-300（GitHub Copilot） | [生成コードの著作権と安全対策](./gh-300/14-ip-and-safeguards) |
 | 2026-10-11 | GH-300（GitHub Copilot） | [GitHub Copilot のプライバシーとデータ保護](./gh-300/13-privacy-and-content-exclusion) |
 | 2026-10-11 | GH-300（GitHub Copilot） | [GitHub Copilot の仕組みとデータフロー](./gh-300/12-copilot-data-flow) |
