@@ -68,7 +68,7 @@ GH-300 は、GitHub Copilot（開発者の作業を支援する AI ツール）�
 
 | # | ページ | 状態 |
 |---|---|---|
-| 13 | GitHub Copilot のプライバシーとデータ保護 | 準備中 |
+| 13 | [GitHub Copilot のプライバシーとデータ保護](./13-privacy-and-content-exclusion) | 公開済み |
 | 14 | 生成コードの著作権と安全対策 | 準備中 |
 | 15 | 組織での Copilot の管理とガバナンス | 準備中 |
 
