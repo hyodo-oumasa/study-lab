@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
 import QuizQuestion from './components/QuizQuestion.vue'
+import './custom.css'
 
 export default {
   extends: DefaultTheme,
