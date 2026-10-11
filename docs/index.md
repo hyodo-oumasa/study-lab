@@ -38,6 +38,7 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-11 | GH-300（GitHub Copilot） | [GitHub Copilot のプライバシーとデータ保護](./gh-300/13-privacy-and-content-exclusion) |
 | 2026-10-11 | GH-300（GitHub Copilot） | [GitHub Copilot の仕組みとデータフロー](./gh-300/12-copilot-data-flow) |
 | 2026-10-10 | GH-300（GitHub Copilot） | [プロンプトエンジニアリングの基本](./gh-300/10-prompt-engineering-basics) |
 | 2026-10-10 | GH-300（GitHub Copilot） | [責任ある AI の 6 つの原則](./gh-300/03-responsible-ai-principles) |
