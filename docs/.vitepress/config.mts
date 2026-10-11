@@ -39,6 +39,7 @@ export default defineConfig({
           { text: '10. プロンプトエンジニアリングの基本', link: '/gh-300/10-prompt-engineering-basics' },
           { text: '12. GitHub Copilot の仕組みとデータフロー', link: '/gh-300/12-copilot-data-flow' },
           { text: '13. GitHub Copilot のプライバシーとデータ保護', link: '/gh-300/13-privacy-and-content-exclusion' },
+          { text: '14. 生成コードの著作権と安全対策', link: '/gh-300/14-ip-and-safeguards' },
         ],
       },
       {
