@@ -20,9 +20,9 @@ features:
   - title: 統計検定2級
     details: 記述統計から推定・検定・回帰まで。自分のデータと自作の例題で確かめる。
     link: /stats-2/
-  - title: MCP
-    details: Model Context Protocol の仕組みと、自作 MCP サーバーの記録。
-    link: /mcp/
+  - title: Claude Code
+    details: Skills、MCP、Agent Teams などの機能を、このサイトのリポジトリで実際に試しながら学ぶ。
+    link: /claude-code/
   - title: Vue
     details: このサイト自体を題材に、Vue のコンポーネントを作りながら学ぶ。
     link: /vue/

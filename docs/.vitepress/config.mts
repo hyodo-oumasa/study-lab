@@ -14,7 +14,7 @@ export default defineConfig({
       { text: 'ホーム', link: '/' },
       { text: 'GH-300', link: '/gh-300/' },
       { text: '統計検定2級', link: '/stats-2/' },
-      { text: 'MCP', link: '/mcp/' },
+      { text: 'Claude Code', link: '/claude-code/' },
       { text: 'Vue', link: '/vue/' },
       { text: 'Python ライブラリ', link: '/python-libs/' },
       { text: 'CI/CD', link: '/cicd/' },
@@ -26,7 +26,7 @@ export default defineConfig({
         items: [
           { text: 'GH-300（GitHub Copilot）', link: '/gh-300/' },
           { text: '統計検定2級', link: '/stats-2/' },
-          { text: 'MCP', link: '/mcp/' },
+          { text: 'Claude Code', link: '/claude-code/' },
           { text: 'Vue', link: '/vue/' },
           { text: 'Python ライブラリ', link: '/python-libs/' },
         ],
@@ -40,6 +40,12 @@ export default defineConfig({
           { text: '12. GitHub Copilot の仕組みとデータフロー', link: '/gh-300/12-copilot-data-flow' },
           { text: '13. GitHub Copilot のプライバシーとデータ保護', link: '/gh-300/13-privacy-and-content-exclusion' },
           { text: '14. 生成コードの著作権と安全対策', link: '/gh-300/14-ip-and-safeguards' },
+        ],
+      },
+      {
+        text: 'Claude Code',
+        items: [
+          { text: '概要とページの一覧', link: '/claude-code/' },
         ],
       },
       {
