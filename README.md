@@ -6,7 +6,7 @@
 
 - GitHub Copilot（GH-300）
 - 統計検定2級
-- MCP（Model Context Protocol）
+- Claude Code（Skills、MCP、Agent Teams など）
 - Vue
 - Python ライブラリの探索
 
