@@ -1,0 +1,4 @@
+/* 表の中の短い語句（「準備中」「Part 1-1」など）が、途中で折り返されないようにする */
+.vp-doc .nowrap {
+  white-space: nowrap;
+}
