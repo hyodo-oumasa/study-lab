@@ -38,6 +38,7 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-12 | Claude Code | [設定ファイルの仕組み](./claude-code/04-settings-files) |
 | 2026-10-12 | Claude Code | [権限モードと、確認を減らす方法](./claude-code/03-permission-modes) |
 | 2026-10-12 | Claude Code | [Claude Code を使う場所](./claude-code/02-where-to-use) |
 | 2026-10-11 | Claude Code | [Claude Code とは何か](./claude-code/01-what-is-claude-code) |
