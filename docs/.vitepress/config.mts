@@ -48,6 +48,7 @@ export default defineConfig({
           { text: '概要とページの一覧', link: '/claude-code/' },
           { text: '01. Claude Code とは何か', link: '/claude-code/01-what-is-claude-code' },
           { text: '02. Claude Code を使う場所', link: '/claude-code/02-where-to-use' },
+          { text: '03. 権限モードと、確認を減らす方法', link: '/claude-code/03-permission-modes' },
         ],
       },
       {
