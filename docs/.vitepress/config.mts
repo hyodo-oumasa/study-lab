@@ -50,6 +50,7 @@ export default defineConfig({
           { text: '02. Claude Code を使う場所', link: '/claude-code/02-where-to-use' },
           { text: '03. 権限モードと、確認を減らす方法', link: '/claude-code/03-permission-modes' },
           { text: '04. 設定ファイルの仕組み', link: '/claude-code/04-settings-files' },
+          { text: '05. CLAUDE.md とメモリ', link: '/claude-code/05-claude-md-and-memory' },
         ],
       },
       {
