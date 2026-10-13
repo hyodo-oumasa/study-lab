@@ -36,7 +36,7 @@ Claude に、プロジェクトのルールや手順を覚えさせ、外部の�
 | # | ページ | 内容 | 状態 |
 |---|---|---|---|
 | 05 | [CLAUDE.md とメモリ](./05-claude-md-and-memory) | Claude が毎回読み込む、プロジェクトのルール | <span class="nowrap">公開済み</span> |
-| 06 | Skills | 手順や知識を、呼び出せる形にまとめる | <span class="nowrap">準備中</span> |
+| 06 | [Skills](./06-skills) | 手順や知識を、呼び出せる形にまとめる | <span class="nowrap">公開済み</span> |
 | 07 | MCP とコネクター | 外部のサービスにつなぐ | <span class="nowrap">準備中</span> |
 | 08 | MCP サーバーを自作する | 学習ノートを検索できる、小さなサーバーを Python で作る | <span class="nowrap">準備中</span> |
 | 09 | Hooks | 特定のタイミングで、決まった処理を必ず実行させる | <span class="nowrap">準備中</span> |
