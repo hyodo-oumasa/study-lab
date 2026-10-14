@@ -52,6 +52,7 @@ export default defineConfig({
           { text: '04. 設定ファイルの仕組み', link: '/claude-code/04-settings-files' },
           { text: '05. CLAUDE.md とメモリ', link: '/claude-code/05-claude-md-and-memory' },
           { text: '06. Skills', link: '/claude-code/06-skills' },
+          { text: '07. MCP とコネクター', link: '/claude-code/07-mcp-and-connectors' },
         ],
       },
       {
