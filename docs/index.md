@@ -38,6 +38,7 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-15 | Claude Code | [MCP サーバーを自作する](./claude-code/08-build-an-mcp-server) |
 | 2026-10-13 | Claude Code | [MCP とコネクター](./claude-code/07-mcp-and-connectors) |
 | 2026-10-13 | Claude Code | [Skills](./claude-code/06-skills) |
 | 2026-10-12 | Claude Code | [CLAUDE.md とメモリ](./claude-code/05-claude-md-and-memory) |
