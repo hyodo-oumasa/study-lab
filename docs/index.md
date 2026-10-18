@@ -38,6 +38,7 @@ features:
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-18 | Claude Code | [Hooks](./claude-code/09-hooks) |
 | 2026-10-15 | Claude Code | [MCP サーバーを自作する](./claude-code/08-build-an-mcp-server) |
 | 2026-10-13 | Claude Code | [MCP とコネクター](./claude-code/07-mcp-and-connectors) |
 | 2026-10-13 | Claude Code | [Skills](./claude-code/06-skills) |
