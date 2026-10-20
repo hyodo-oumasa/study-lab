@@ -2,6 +2,7 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
+import HomeShelf from './components/HomeShelf.vue'
 import QuizQuestion from './components/QuizQuestion.vue'
 import './custom.css'
 
@@ -10,5 +11,7 @@ export default {
   enhanceApp({ app }) {
     // Markdown の中で <QuizQuestion> と書けば使えるようにする
     app.component('QuizQuestion', QuizQuestion)
+    // トップページの「ノートの棚」
+    app.component('HomeShelf', HomeShelf)
   },
 } satisfies Theme

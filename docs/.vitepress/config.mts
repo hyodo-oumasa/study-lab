@@ -9,6 +9,19 @@ export default defineConfig({
   description: '個人の勉強で得た知見をまとめる学習ナレッジサイト',
   lastUpdated: true,
 
+  // トップページの「ノートの棚」で使う書体（本文：BIZ UDPゴシック、見出し：Klee One）
+  head: [
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Klee+One:wght@600&display=swap',
+      },
+    ],
+  ],
+
   themeConfig: {
     nav: [
       { text: 'ホーム', link: '/' },
