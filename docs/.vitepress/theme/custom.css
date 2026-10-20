@@ -2,3 +2,231 @@
 .vp-doc .nowrap {
   white-space: nowrap;
 }
+
+/* ===== トップページ「ノートの棚」（pageClass: home-notebook のページだけに効く） ===== */
+.home-notebook {
+  --nb-paper: #f6f8fa;
+  --nb-grid: #dde5ec;
+  --nb-ink: #1f3a5f;
+  --nb-red: #c8102e;
+  --nb-pencil: #6b7480;
+  --nb-spine-text: #f6f8fa;
+  background-color: var(--nb-paper);
+  background-image:
+    linear-gradient(var(--nb-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nb-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .home-notebook {
+  --nb-paper: #141a21;
+  --nb-grid: #1f2832;
+  --nb-ink: #c9d6e6;
+  --nb-red: #ff6b7a;
+  --nb-pencil: #93a0ad;
+  --nb-spine-text: #141a21;
+}
+
+.home-notebook .VPContent {
+  background: transparent;
+}
+
+.home-notebook .VPPage {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+  font-family: 'BIZ UDPGothic', var(--vp-font-family-base);
+  color: var(--nb-ink);
+}
+
+.home-notebook .shelf-hero {
+  padding: 3.5rem 0 1.5rem;
+}
+
+.home-notebook .shelf-title {
+  font-family: 'Klee One', var(--vp-font-family-base);
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--nb-ink);
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-notebook .shelf-lead {
+  margin: 0.75rem 0 0;
+  font-size: 1.125rem;
+  color: var(--nb-ink);
+}
+
+.home-notebook .shelf-heading,
+.home-notebook h2 {
+  font-family: 'Klee One', var(--vp-font-family-base);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--nb-ink);
+  border-top: none;
+  margin: 2rem 0 1rem;
+  padding-top: 0;
+}
+
+.home-notebook .shelf-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.6rem;
+  border-bottom: 6px solid var(--nb-ink);
+}
+
+.home-notebook .shelf-row li {
+  margin: 0;
+}
+
+.home-notebook .spine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 13rem;
+  padding: 0.75rem 0.25rem;
+  background: var(--nb-ink);
+  color: var(--nb-spine-text);
+  border-radius: 3px 3px 0 0;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.home-notebook .spine:hover {
+  transform: translateY(-6px);
+}
+
+.home-notebook .spine:focus-visible {
+  outline: 3px solid var(--nb-red);
+  outline-offset: 3px;
+}
+
+.home-notebook .spine--empty {
+  background: transparent;
+  color: var(--nb-pencil);
+  border: 2px dashed var(--nb-pencil);
+}
+
+.home-notebook .spine-title {
+  writing-mode: vertical-rl;
+  font-family: 'Klee One', var(--vp-font-family-base);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.home-notebook .spine-count {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.home-notebook .shelf-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--nb-pencil);
+}
+
+/* 新着記事の表を、日誌のような一覧に見せる。表の形は変えない（スキルが行を書き足すため） */
+.home-notebook .VPPage table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.home-notebook .VPPage thead {
+  display: none;
+}
+
+.home-notebook .VPPage tr,
+.home-notebook .VPPage td {
+  background: transparent;
+  border: none;
+}
+
+.home-notebook .VPPage tr {
+  border-bottom: 1px solid var(--nb-grid);
+}
+
+.home-notebook .VPPage td {
+  padding: 0.55rem 0.5rem 0.55rem 0;
+}
+
+.home-notebook .VPPage td:first-child {
+  width: 6.5rem;
+  color: var(--nb-pencil);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.home-notebook .VPPage td:nth-child(2) {
+  width: 9rem;
+  color: var(--nb-pencil);
+  font-size: 0.9rem;
+}
+
+.home-notebook .VPPage td a {
+  color: var(--nb-ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-notebook .VPPage td a:hover {
+  text-decoration: underline;
+}
+
+/* いちばん新しい 1 件にだけ、赤ペンの印を付ける */
+.home-notebook .VPPage tbody tr:first-child td:last-child::after {
+  content: '新';
+  margin-left: 0.5rem;
+  padding: 0 0.3rem;
+  border: 1.5px solid var(--nb-red);
+  border-radius: 50%;
+  color: var(--nb-red);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .home-notebook .shelf-title {
+    font-size: 2.25rem;
+  }
+
+  .home-notebook .shelf-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.25rem;
+  }
+
+  .home-notebook .spine {
+    height: 12rem;
+  }
+
+  .home-notebook .spine-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  .home-notebook .VPPage td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-notebook .spine {
+    transition: none;
+  }
+
+  .home-notebook .spine:hover {
+    transform: none;
+  }
+}
