@@ -10,6 +10,7 @@
   - ビルドし直したら、確認用のサーバーを起動し直す（古いファイル一覧のままになるため）
 - Python のテスト：`pytest`
 - Python の lint：`ruff check .`
+- Python の型の検査：`pyright`（仮想環境の外から動かすときは `venv/bin/pyright --pythonpath venv/bin/python`）
 - Python の仮想環境は `venv/`
 
 ## 変更の進め方

@@ -1,7 +1,8 @@
 # main 向けの PR が作られたり更新されたりしたら、Python のコードを検査する。
 # - python-lint: 書き方の検査（ruff）
+# - python-typecheck: 型の検査（pyright）
 # - python-test: テスト（pytest）を、複数の OS と Python バージョンで実行
-# - python-ci:   上の 2 つの結果をまとめる。ブランチ保護の必須チェックにはこれを登録する
+# - python-ci:   上の 3 つの結果をまとめる。ブランチ保護の必須チェックにはこれを登録する
 name: Python CI
 
 on:
@@ -39,6 +40,26 @@ jobs:
       - name: Check formatting with ruff
         run: ruff format --check .
 
+  python-typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt -e .
+
+      # ruff は書き方を、pytest は動きを調べる。値の種類（型）が合っているかは pyright が調べる
+      - name: Type check with pyright
+        run: pyright
+
   python-test:
     strategy:
       # 1 つの組み合わせが失敗しても、ほかの組み合わせは最後まで実行する
@@ -69,17 +90,19 @@ jobs:
     # 前のジョブが失敗しても必ず実行する。スキップされた必須チェックは
     # 「合格」として扱われるため、スキップさせずに自分で失敗を報告する。
     if: always()
-    needs: [python-lint, python-test]
+    needs: [python-lint, python-typecheck, python-test]
     runs-on: ubuntu-latest
     steps:
       - name: Check results
         env:
           LINT_RESULT: ${{ needs.python-lint.result }}
+          TYPECHECK_RESULT: ${{ needs.python-typecheck.result }}
           TEST_RESULT: ${{ needs.python-test.result }}
         run: |
           echo "python-lint: $LINT_RESULT"
+          echo "python-typecheck: $TYPECHECK_RESULT"
           echo "python-test: $TEST_RESULT"
-          if [ "$LINT_RESULT" != "success" ] || [ "$TEST_RESULT" != "success" ]; then
-            echo "lint またはテストが成功していません。"
+          if [ "$LINT_RESULT" != "success" ] || [ "$TYPECHECK_RESULT" != "success" ] || [ "$TEST_RESULT" != "success" ]; then
+            echo "lint、型の検査、テストのどれかが成功していません。"
             exit 1
           fi

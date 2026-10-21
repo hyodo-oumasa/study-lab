@@ -220,6 +220,7 @@ source venv/bin/activate
 python -m pip install -r requirements-dev.txt -e .
 ruff check .
 ruff format --check .
+pyright
 pytest
 ```
 
@@ -231,6 +232,7 @@ venv\Scripts\Activate.ps1
 python -m pip install -r requirements-dev.txt -e .
 ruff check .
 ruff format --check .
+pyright
 pytest
 ```
 
