@@ -1,6 +1,6 @@
 # Python のテストと lint を CI で自動実行する
 
-このページでは、PR（プルリクエスト：変更の提案）を出すたびに、Python のテストと lint を自動で実行する仕組みを作った手順をまとめます。テストは、3 つの OS（Linux・Windows・macOS）と 2 つの Python バージョンの組み合わせで動かします。
+このページでは、PR（プルリクエスト：変更の提案）を出すたびに、Python のテストと lint を自動で実行する仕組みを作った手順をまとめます。あとから、型の検査も加えました。テストは、3 つの OS（Linux・Windows・macOS）と 2 つの Python バージョンの組み合わせで動かします。
 
 テストの対象にしたプログラムの設計については、[通信するプログラムを、テストしやすく作る](./testable-python) で説明しています。
 
@@ -12,6 +12,9 @@
 | lint（リント） | コードの書き方に誤りや、決まりから外れた書き方がないかを検査すること |
 | pytest | Python のテストを実行するツール |
 | ruff | Python の lint と、書式の確認・整形を行うツール |
+| 型 | 値の種類。数字、文字列、日付、一覧など |
+| 型の検査 | プログラムを動かさずに読んで、値の種類が合っているか（数字を渡すべきところに文字を渡していないか、など）を調べること |
+| pyright | Python の型の検査を行うツール |
 | ワークフロー | GitHub Actions で自動実行する手順をまとめたファイル |
 | ジョブ | ワークフローの中の作業のまとまり。ジョブごとに別の仮想マシンで動く |
 | マトリクス | OS やバージョンなどの組み合わせを指定して、同じジョブを複数の条件で動かす仕組み |
@@ -19,17 +22,18 @@
 
 ## 全体の構成
 
-ワークフロー `.github/workflows/python-ci.yml` には、3 つのジョブがあります。
+ワークフロー `.github/workflows/python-ci.yml` には、4 つのジョブがあります。
 
 | ジョブ | 役割 | 動かす環境 |
 |---|---|---|
 | `python-lint` | ruff で書き方を検査し、書式が整っているかを確認する | Linux × Python 3.13 |
+| `python-typecheck` | pyright で型の検査をする | Linux × Python 3.13 |
 | `python-test` | pytest でテストを実行する | 3 つの OS × 2 つの Python バージョン（6 通り） |
-| `python-ci` | 上の 2 つの結果をまとめて、合格か不合格かを判定する | Linux |
+| `python-ci` | 上の 3 つの結果をまとめて、合格か不合格かを判定する | Linux |
 
 ```text
 python-lint ─────────────┐
-                         ├─→ python-ci（結果のまとめ）
+python-typecheck ────────┼─→ python-ci（結果のまとめ）
 python-test（6 通り）─────┘
 ```
 
@@ -37,11 +41,12 @@ python-test（6 通り）─────┘
 
 ## 開発用の部品はバージョンを固定する
 
-pytest と ruff は、`requirements-dev.txt` にバージョンを固定して書いています。
+pytest、ruff、pyright は、`requirements-dev.txt` にバージョンを固定して書いています。
 
 ```text
 pytest==9.1.1
-ruff==0.17.0
+ruff==0.17.1
+pyright==1.1.414
 ```
 
 バージョンを固定しないと、新しい版が公開された日から、何も変更していないのに CI の結果が変わることがあります。特に lint は、新しい版で検査の内容が増えると、昨日まで合格していたコードが不合格になります。固定しておけば、手元と CI で同じ結果になり、更新は Dependabot の PR を通して、チェックを確認しながら行えます。
@@ -98,6 +103,56 @@ concurrency:
 - `ruff check .`：書き方の誤りを検査します。
 - `ruff format --check .`：書式が整っているかを確認します。`--check` を付けると、ファイルを書き換えずに、整っていないファイルがあれば失敗します。
 - lint の結果は OS によって変わらないので、Linux の 1 つの環境だけで動かしています。
+
+### python-typecheck：型の検査
+
+```yaml
+  python-typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt -e .
+
+      - name: Type check with pyright
+        run: pyright
+```
+
+- `-e .` で、このリポジトリの Python のパッケージも入れています。型の検査は、パッケージどうしの関係もたどるためです。
+- 検査の対象と、前提にする Python のバージョンは、`pyproject.toml` に書いています。
+
+```toml
+[tool.pyright]
+include = ["src", "tests"]
+pythonVersion = "3.13"
+```
+
+このジョブは、あとから加えました。はじめは、lint（ruff）とテスト（pytest）があれば十分だと考えていました。しかし、この 2 つが調べるものと、型の検査が調べるものは、違います。
+
+| 道具 | 調べるもの | 見逃すもの |
+|---|---|---|
+| ruff | 書き方。誤った書き方、使っていない読み込み、書式の乱れなど | 値の種類が合っているか |
+| pytest | 動き。テストを書いた部分が、正しい答えを返すか | テストを書いていない部分の誤り |
+| pyright | 型。値の種類が合っているか、存在しない関数や項目を使っていないか。テストを書いていない部分も含めて、すべてのコードを読む | 動きが正しいか（たとえば、並べる順番が逆でも、型は合っているので気づかない） |
+
+3 つは、互いに代わりになるものではなく、穴を埋め合う関係です。
+
+型の検査を加えると、さっそく、テストのコードの弱いところが 6 か所見つかりました。
+
+サーバーの `handle` 関数は、応答を返すときと、何も返さない（`None`）ときがあります。テストでは、その戻り値から、何も返さなかった場合を考えずに、中身を取り出していました。今のテストでは、いつも応答が返るので合格していました。しかし、もし何も返らなかったら、テストはその場で、原因の分かりにくいエラーで止まります。
+
+テストを動かしているだけでは気づけないところを、pyright が見つけました。型の検査を入れる目的どおりの働きです。
+
+直し方：テストのコードに、「応答が返ってきたことを確かめてから、中身を渡す」小さな関数（`respond`）を足し、`handle` を直接使っていた 4 か所で、この関数を使うようにしました。
 
 ### python-test：テスト
 
@@ -202,18 +257,20 @@ def test_windows_only_feature():
 ```yaml
   python-ci:
     if: always()
-    needs: [python-lint, python-test]
+    needs: [python-lint, python-typecheck, python-test]
     runs-on: ubuntu-latest
     steps:
       - name: Check results
         env:
           LINT_RESULT: ${{ needs.python-lint.result }}
+          TYPECHECK_RESULT: ${{ needs.python-typecheck.result }}
           TEST_RESULT: ${{ needs.python-test.result }}
         run: |
           echo "python-lint: $LINT_RESULT"
+          echo "python-typecheck: $TYPECHECK_RESULT"
           echo "python-test: $TEST_RESULT"
-          if [ "$LINT_RESULT" != "success" ] || [ "$TEST_RESULT" != "success" ]; then
-            echo "lint またはテストが成功していません。"
+          if [ "$LINT_RESULT" != "success" ] || [ "$TYPECHECK_RESULT" != "success" ] || [ "$TEST_RESULT" != "success" ]; then
+            echo "lint、型の検査、テストのどれかが成功していません。"
             exit 1
           fi
 ```
@@ -276,6 +333,7 @@ def test_intentional_failure():
 ## まとめ
 
 - 開発用の部品はバージョンを固定し、手元と CI で同じ結果になるようにする。
+- lint（ruff）、型の検査（pyright）、テスト（pytest）は、調べるものが違う。テストがあっても、型の検査の代わりにはならない。
 - マトリクスを使うと、複数の OS とバージョンの組み合わせを、1 つの設定で同時に試せる。
 - 必須チェックには、結果をまとめるジョブを 1 つだけ登録する。マトリクスの内容を変えても、ブランチ保護の設定を直さずに済む。
 - スキップされた必須チェックは合格として扱われる。まとめのジョブは `if: always()` で必ず実行し、前のジョブの結果を自分で確認する。

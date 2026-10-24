@@ -18,8 +18,15 @@ def failing_fetch(start: date, days: int) -> list[Event]:
     raise RuntimeError("許可されていません")
 
 
+def respond(message: dict, fetch=fake_fetch) -> dict:
+    """handle の応答を返す。応答がない（None）ときは、テストを失敗させる。"""
+    response = handle(message, fetch)
+    assert response is not None
+    return response
+
+
 def test_initialize_returns_server_info():
-    response = handle({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}}, fake_fetch)
+    response = respond({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}})
     assert response["result"]["protocolVersion"] == "2025-06-18"
     assert response["result"]["serverInfo"]["name"] == "study-lab-calendar"
     assert "tools" in response["result"]["capabilities"]
@@ -30,7 +37,7 @@ def test_notification_gets_no_response():
 
 
 def test_tools_list_has_one_read_only_tool():
-    response = handle({"jsonrpc": "2.0", "id": 2, "method": "tools/list"}, fake_fetch)
+    response = respond({"jsonrpc": "2.0", "id": 2, "method": "tools/list"})
     tools = response["result"]["tools"]
     assert [t["name"] for t in tools] == ["list_events"]
     assert tools[0]["annotations"]["readOnlyHint"] is True
@@ -43,7 +50,7 @@ def call(arguments: dict, fetch=fake_fetch) -> dict:
         "method": "tools/call",
         "params": {"name": "list_events", "arguments": arguments},
     }
-    return handle(message, fetch)["result"]
+    return respond(message, fetch)["result"]
 
 
 def test_tools_call_lists_events():
@@ -71,7 +78,7 @@ def test_tools_call_reports_calendar_error():
 
 
 def test_unknown_method_is_an_error():
-    response = handle({"jsonrpc": "2.0", "id": 4, "method": "resources/list"}, fake_fetch)
+    response = respond({"jsonrpc": "2.0", "id": 4, "method": "resources/list"})
     assert response["error"]["code"] == -32601
 
 
