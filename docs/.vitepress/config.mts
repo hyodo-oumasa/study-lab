@@ -68,6 +68,7 @@ export default defineConfig({
           { text: '07. MCP とコネクター', link: '/claude-code/07-mcp-and-connectors' },
           { text: '08. MCP サーバーを自作する', link: '/claude-code/08-build-an-mcp-server' },
           { text: '09. Hooks', link: '/claude-code/09-hooks' },
+          { text: '10. Plugins と「カスタマイズ」', link: '/claude-code/10-plugins' },
         ],
       },
       {

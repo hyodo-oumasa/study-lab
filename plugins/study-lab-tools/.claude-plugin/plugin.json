@@ -1,0 +1,8 @@
+{
+  "name": "study-lab-tools",
+  "description": "study-lab のサイトを作るときに使う道具。新しいページの登録の手順（スキル）と、Claude が触ったファイルの記録（フック）",
+  "version": "0.1.0",
+  "author": {
+    "name": "study-lab"
+  }
+}
