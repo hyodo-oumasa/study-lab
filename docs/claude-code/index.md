@@ -48,7 +48,7 @@ Claude に、プロジェクトのルールや手順を覚えさせ、外部の�
 
 | # | ページ | 内容 | 状態 |
 |---|---|---|---|
-| 11 | Artifacts | 作業の結果を、対話的な Web ページとして公開・共有する | <span class="nowrap">準備中</span> |
+| 11 | [Artifacts](./11-artifacts) | 作業の結果を、対話的な Web ページとして公開・共有する | <span class="nowrap">公開済み</span> |
 | 12 | ルーティンと、スケジュール実行 | 保存した指示を、スケジュールや GitHub の出来事をきっかけに、自動で実行する | <span class="nowrap">準備中</span> |
 | 13 | Claude Code を CI で動かす | GitHub Actions の中で Claude を動かす。対話なしで実行する方法 | <span class="nowrap">準備中</span> |
 
