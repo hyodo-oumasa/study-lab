@@ -11,6 +11,7 @@ type Notebook = { dir: string; title: string; total?: number }
 // total は、テーマのトップページで予定しているページの数。決めていないテーマは書かない。
 const notebooks: Notebook[] = [
   { dir: 'claude-code', title: 'Claude Code', total: 20 },
+  { dir: 'claude-cert', title: 'Claude 認定資格' },
   { dir: 'gh-300', title: 'GH-300', total: 21 },
   { dir: 'cicd', title: 'CI/CD' },
   { dir: 'stats-2', title: '統計検定2級' },
