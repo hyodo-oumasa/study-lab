@@ -100,7 +100,7 @@ Claude の認定資格は、Claude を使った仕事の力を確かめる、Ant
 
 | 順番 | ページ | 出題分野 | この順番にした理由 | 状態 |
 |---|---|---|---|---|
-| 1 | Claude Code の設定と使い方 | 3 | 「Claude Code」のテーマの 01〜11 が、そのまま土台になる | <span class="nowrap">準備中</span> |
+| 1 | [Claude Code の設定と使い方](./architect-3-claude-code) | 3 | 「Claude Code」のテーマの 01〜11 が、そのまま土台になる | <span class="nowrap">公開済み</span> |
 | 2 | 道具の設計と MCP | 2 | 「Claude Code」のテーマの 08 で、MCP サーバーを作った。道具の作り方は、エージェントの前提になる | <span class="nowrap">準備中</span> |
 | 3 | エージェントの設計と協調 | 1 | 比重がいちばん大きい。2 で学んだ道具を使って、エージェントを作る | <span class="nowrap">準備中</span> |
 | 4 | プロンプトと構造化した出力 | 4 | 出力の形を決める方法の 1 つは、道具の呼び出しの形を使う。1 と 2 の知識を使う | <span class="nowrap">準備中</span> |

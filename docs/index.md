@@ -10,6 +10,7 @@ title: study-lab
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-26 | Claude 認定資格 | [Architect 分野 3：Claude Code の設定と使い方](./claude-cert/architect-3-claude-code) |
 | 2026-10-26 | Claude 認定資格 | [概要と学習計画](./claude-cert/) |
 | 2026-10-26 | Claude Code | [Artifacts](./claude-code/11-artifacts) |
 | 2026-10-24 | Claude Code | [Plugins と「カスタマイズ」](./claude-code/10-plugins) |
