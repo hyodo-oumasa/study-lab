@@ -78,6 +78,7 @@ export default defineConfig({
         text: 'Claude 認定資格',
         items: [
           { text: '概要と学習計画', link: '/claude-cert/' },
+          { text: 'Architect 分野 3：Claude Code の設定と使い方', link: '/claude-cert/architect-3-claude-code' },
         ],
       },
       {
