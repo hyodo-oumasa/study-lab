@@ -28,6 +28,7 @@ export default defineConfig({
       { text: 'GH-300', link: '/gh-300/' },
       { text: '統計検定2級', link: '/stats-2/' },
       { text: 'Claude Code', link: '/claude-code/' },
+      { text: 'Claude 認定資格', link: '/claude-cert/' },
       { text: 'Vue', link: '/vue/' },
       { text: 'Python ライブラリ', link: '/python-libs/' },
       { text: 'CI/CD', link: '/cicd/' },
@@ -40,6 +41,7 @@ export default defineConfig({
           { text: 'GH-300（GitHub Copilot）', link: '/gh-300/' },
           { text: '統計検定2級', link: '/stats-2/' },
           { text: 'Claude Code', link: '/claude-code/' },
+          { text: 'Claude 認定資格', link: '/claude-cert/' },
           { text: 'Vue', link: '/vue/' },
           { text: 'Python ライブラリ', link: '/python-libs/' },
         ],
@@ -70,6 +72,12 @@ export default defineConfig({
           { text: '09. Hooks', link: '/claude-code/09-hooks' },
           { text: '10. Plugins と「カスタマイズ」', link: '/claude-code/10-plugins' },
           { text: '11. Artifacts', link: '/claude-code/11-artifacts' },
+        ],
+      },
+      {
+        text: 'Claude 認定資格',
+        items: [
+          { text: '概要と学習計画', link: '/claude-cert/' },
         ],
       },
       {
