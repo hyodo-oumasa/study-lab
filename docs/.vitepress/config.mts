@@ -77,8 +77,28 @@ export default defineConfig({
       {
         text: 'Claude 認定資格',
         items: [
-          { text: '概要と学習計画', link: '/claude-cert/' },
-          { text: 'Architect 分野 3：Claude Code の設定と使い方', link: '/claude-cert/architect-3-claude-code' },
+          { text: '概要と学び方', link: '/claude-cert/' },
+          {
+            text: 'Associate – Foundations',
+            collapsed: false,
+            items: [
+              { text: '概要と出題分野', link: '/claude-cert/associate' },
+            ],
+          },
+          {
+            text: 'Architect – Foundations',
+            collapsed: true,
+            items: [
+              { text: '概要と出題分野', link: '/claude-cert/architect' },
+              {
+                text: '分野 3：Claude Code の設定と使い方',
+                link: '/claude-cert/architect-3-claude-code',
+                items: [
+                  { text: '3.1 CLAUDE.md の階層と整理', link: '/claude-cert/architect-3-1-claude-md' },
+                ],
+              },
+            ],
+          },
         ],
       },
       {
