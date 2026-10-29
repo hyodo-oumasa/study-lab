@@ -10,6 +10,8 @@ title: study-lab
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-29 | Claude 認定資格 | [Associate 分野 6：ガバナンス、リスク、責任ある利用](./claude-cert/associate-6-governance) |
+| 2026-10-29 | Claude 認定資格 | [Associate 分野 4：ワークフロー統合とソリューション設計](./claude-cert/associate-4-workflow-integration) |
 | 2026-10-29 | Claude 認定資格 | [Associate 分野 2：出力の評価と検証](./claude-cert/associate-2-output-evaluation) |
 | 2026-10-28 | Claude 認定資格 | [Associate – Foundations：概要と出題分野](./claude-cert/associate) |
 | 2026-10-28 | Claude 認定資格 | [Architect 3.1：CLAUDE.md の階層と整理](./claude-cert/architect-3-1-claude-md) |
