@@ -83,6 +83,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: '概要と出題分野', link: '/claude-cert/associate' },
+              { text: '分野 2：出力の評価と検証', link: '/claude-cert/associate-2-output-evaluation' },
             ],
           },
           {

@@ -10,6 +10,7 @@ title: study-lab
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-29 | Claude 認定資格 | [Associate 分野 2：出力の評価と検証](./claude-cert/associate-2-output-evaluation) |
 | 2026-10-28 | Claude 認定資格 | [Associate – Foundations：概要と出題分野](./claude-cert/associate) |
 | 2026-10-28 | Claude 認定資格 | [Architect 3.1：CLAUDE.md の階層と整理](./claude-cert/architect-3-1-claude-md) |
 | 2026-10-26 | Claude 認定資格 | [Architect 分野 3：Claude Code の設定と使い方](./claude-cert/architect-3-claude-code) |
