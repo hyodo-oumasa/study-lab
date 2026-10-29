@@ -44,7 +44,7 @@ Architect – Foundations と違い、場面ごとの出題ではありません
 
 | 順番 | ページ | 出題分野 | 比重 | 状態 |
 |---|---|---|---|---|
-| 1 | 出力の評価と確かめ方 | 2 | 21% | <span class="nowrap">準備中</span> |
+| 1 | [出力の評価と検証](./associate-2-output-evaluation) | 2 | 21% | <span class="nowrap">公開済み</span> |
 | 2 | 業務への組み込みと解決策の設計 | 4 | 16% | <span class="nowrap">準備中</span> |
 | 3 | ガバナンス、リスク、責任ある使い方 | 6 | 15% | <span class="nowrap">準備中</span> |
 | 4 | プロンプトと作業の進め方 | 1 | 14% | <span class="nowrap">準備中</span> |
