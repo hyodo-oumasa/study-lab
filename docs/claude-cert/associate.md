@@ -18,13 +18,13 @@ Claude Certified Associate – Foundations（CCAO-F）の試験の概要と、�
 
 | 出題分野 | 英語での名前 | 比重 | 問題数の目安 | 主な内容 |
 |---|---|---|---|---|
-| 1. プロンプト作成とタスク実行 | Prompting and Task Execution | 14% | 約 8 問 | 仕事の依頼の書き方、複雑な依頼の分け方、やり直して良くする方法、作業の種類（分析、調査、下書き、アイデア出し）に合わせた書き方 |
-| 2. 出力の評価と検証 | Output Evaluation and Validation | 21% | 約 13 問 | 正しさと抜けの確認、事実と違う内容や偏りの見つけ方、事実の確かめ方、人の確認が要る場面、読み手に合わせた直し方、出力の形の選び方 |
-| 3. 製品とモデルの選択 | Product and Model Selection | 12% | 約 7 問 | 機能（Projects、リサーチ、チャット、Artifacts）の選び方、Haiku・Sonnet・Opus の違いと選び方、会話の長さの限界と、やり直す・要約する・残すの判断 |
-| 4. ワークフロー統合とソリューション設計 | Workflow Integration and Solution Design | 16% | 約 10 問 | 要件の分析、調査と計画、解決策の設計の手伝い、今の業務への組み込み、Claude の価値と限界の説明 |
-| 5. 設定とナレッジ管理 | Configuration and Knowledge Management | 12% | 約 7 問 | Projects の指示と資料、アップロードした資料とコネクター（Google Drive など）、全体に効く指示の書き方、設定の見直し |
-| 6. ガバナンス、リスク、責任ある利用 | Governance, Risk, and Responsible Use | 15% | 約 9 問 | 向く使い方と向かない使い方、機密のデータ・法律・プライバシーへの配慮、組織の方針に従うこと、倫理の問題 |
-| 7. トラブルシューティングと最適化 | Troubleshooting and Optimization | 10% | 約 6 問 | うまくいかないプロンプトや出力の原因を探って直す、結果に応じたやり方の調整、業務の効率化 |
+| 1. [プロンプト作成とタスク実行](./associate-1-prompting) | Prompting and Task Execution | 14% | 約 8 問 | 仕事の依頼の書き方、複雑な依頼の分け方、やり直して良くする方法、作業の種類（分析、調査、下書き、アイデア出し）に合わせた書き方 |
+| 2. [出力の評価と検証](./associate-2-output-evaluation) | Output Evaluation and Validation | 21% | 約 13 問 | 正しさと抜けの確認、事実と違う内容や偏りの見つけ方、事実の確かめ方、人の確認が要る場面、読み手に合わせた直し方、出力の形の選び方 |
+| 3. [製品とモデルの選択](./associate-3-product-model-selection) | Product and Model Selection | 12% | 約 7 問 | 機能（Projects、リサーチ、チャット、Artifacts）の選び方、Haiku・Sonnet・Opus の違いと選び方、会話の長さの限界と、やり直す・要約する・残すの判断 |
+| 4. [ワークフロー統合とソリューション設計](./associate-4-workflow-integration) | Workflow Integration and Solution Design | 16% | 約 10 問 | 要件の分析、調査と計画、解決策の設計の手伝い、今の業務への組み込み、Claude の価値と限界の説明 |
+| 5. [設定とナレッジ管理](./associate-5-configuration-knowledge) | Configuration and Knowledge Management | 12% | 約 7 問 | Projects の指示と資料、アップロードした資料とコネクター（Google Drive など）、全体に効く指示の書き方、設定の見直し |
+| 6. [ガバナンス、リスク、責任ある利用](./associate-6-governance) | Governance, Risk, and Responsible Use | 15% | 約 9 問 | 向く使い方と向かない使い方、機密のデータ・法律・プライバシーへの配慮、組織の方針に従うこと、倫理の問題 |
+| 7. [トラブルシューティングと最適化](./associate-7-troubleshooting) | Troubleshooting and Optimization | 10% | 約 6 問 | うまくいかないプロンプトや出力の原因を探って直す、結果に応じたやり方の調整、業務の効率化 |
 
 - 問題数の目安は、60 問に比重を掛けて、このサイトで計算したものです。実際の問題数は前後します。
 - 出題分野の日本語の名前は、日本語版の試験ガイドに合わせています。主な内容は、このサイトでの要約です。
