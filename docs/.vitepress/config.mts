@@ -83,7 +83,9 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: '概要と出題分野', link: '/claude-cert/associate' },
+              { text: '分野 1：プロンプト作成とタスク実行', link: '/claude-cert/associate-1-prompting' },
               { text: '分野 2：出力の評価と検証', link: '/claude-cert/associate-2-output-evaluation' },
+              { text: '分野 3：製品とモデルの選択', link: '/claude-cert/associate-3-product-model-selection' },
               { text: '分野 4：ワークフロー統合とソリューション設計', link: '/claude-cert/associate-4-workflow-integration' },
               { text: '分野 6：ガバナンス、リスク、責任ある利用', link: '/claude-cert/associate-6-governance' },
             ],

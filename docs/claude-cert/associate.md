@@ -47,8 +47,8 @@ Architect – Foundations と違い、場面ごとの出題ではありません
 | 1 | [出力の評価と検証](./associate-2-output-evaluation) | 2 | 21% | <span class="nowrap">公開済み</span> |
 | 2 | [ワークフロー統合とソリューション設計](./associate-4-workflow-integration) | 4 | 16% | <span class="nowrap">公開済み</span> |
 | 3 | [ガバナンス、リスク、責任ある利用](./associate-6-governance) | 6 | 15% | <span class="nowrap">公開済み</span> |
-| 4 | プロンプト作成とタスク実行 | 1 | 14% | <span class="nowrap">準備中</span> |
-| 5 | 製品とモデルの選択 | 3 | 12% | <span class="nowrap">準備中</span> |
+| 4 | [プロンプト作成とタスク実行](./associate-1-prompting) | 1 | 14% | <span class="nowrap">公開済み</span> |
+| 5 | [製品とモデルの選択](./associate-3-product-model-selection) | 3 | 12% | <span class="nowrap">公開済み</span> |
 | 6 | 設定とナレッジ管理 | 5 | 12% | <span class="nowrap">準備中</span> |
 | 7 | トラブルシューティングと最適化 | 7 | 10% | <span class="nowrap">準備中</span> |
 

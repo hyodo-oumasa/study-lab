@@ -56,10 +56,11 @@
 ## 項目 3　組織の AI ポリシーとガバナンスの基準に従う
 
 - **要点**
-  - Team と Enterprise では、組織の管理者が機能を管理する。たとえば、ウェブ検索は、オーナーが組織の設定で有効にしてから、メンバーが使えるようになる。メモリ（会話の内容を覚えておく機能）は、Team と Enterprise では初期設定で切られていて、オーナーが許可すると使える。
+  - Team と Enterprise では、組織の管理者が機能を管理する。たとえば、ウェブ検索は、オーナーが組織の設定で有効にしてから、メンバーが使えるようになる。メモリ（会話の内容を覚えておく機能）は、Team と Enterprise では、組織で使えるかどうかをオーナーが決める。メンバーは、自分でオンにするまで使わない。
   - 組織の AI ポリシーは、使ってよいツール、入れてよいデータ、確認の手順などを決めている。個人の判断で、そのルールの外で使わない。
 - **公式ドキュメント**
   - ヘルプセンターの「Enable and use web search」。Team と Enterprise では、オーナーが先に組織全体でウェブ検索を有効にする必要がある。
+  - ヘルプセンターの「Use Claude's chat search and memory to build on previous context」。Team と Enterprise では、オーナーが組織の設定でメモリを使えるかを決め（組織の設定の初期値はオン）、メンバーは自分でオンにするまで切れている。
   - Claude 101「Claudeとの最初の会話」の「Claudeをパーソナライズする」。メモリの初期設定がプランによって違うことが書かれている。
 - **試験での見分け方**：「便利なので、会社が認めていない個人のアカウントで仕事のデータを扱う」は、不適切な選択肢。「組織のポリシーを確かめ、分からなければ担当者に聞く」が正解になりやすい。
 - **紛らわしいもの**：Team と Enterprise でウェブ検索が使えないときは、メンバーが自分の設定で直すのではない。オーナーが組織の設定で有効にする。
@@ -144,6 +145,7 @@ Claude 101 には、ガバナンスを中心に扱うレッスンはありませ
 - [Is my data used for model training?（Privacy Center、個人向け）](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training)
 - [Is my data used for model training?（Privacy Center、法人向け）](https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training)
 - [Enable and use web search（Claude Help Center）](https://support.claude.com/en/articles/10684626-enable-and-use-web-search)
+- [Use Claude's chat search and memory to build on previous context（Claude Help Center）](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 - [Claude 101（Claude Academy）](https://academy.claude.com/ja/courses/claude-101)：レッスン 2、3
 - [AI活用力：フレームワーク&基礎（Claude Academy）](https://academy.claude.com/ja/courses/ai-fluency-framework-foundations)：「倫理的責任 (Diligence) を詳しく見る」
 
@@ -151,4 +153,4 @@ Claude 101 には、ガバナンスを中心に扱うレッスンはありませ
 |---|---|
 | 最終確認日 | 2026 年 10 月 29 日 |
 | 検証の状況 | 公式ドキュメントと Claude Academy の教材の内容をもとに書いている。設定の画面は確かめていない |
-| 確かめていない内容 | 項目 3 の「個人のアカウントを会社の仕事に使わない」「分からなければ担当者に聞く」は、公式ドキュメントにそのまま書かれたものではない。「モデルの改善」の設定、シークレットチャット、組織の管理画面の実際の表示。利用規約の 2026 年 11 月 12 日より前の版との違い。試験ガイド（2026 年 7 月）が、どの版の利用規約をもとにしているか |
+| 確かめていない内容 | 項目 3 の「個人のアカウントを会社の仕事に使わない」「分からなければ担当者に聞く」は、公式ドキュメントにそのまま書かれたものではない。「モデルの改善」の設定、シークレットチャット、組織の管理画面の実際の表示。利用規約の 2026 年 11 月 12 日より前の版との違い。試験ガイド（2026 年 7 月）が、どの版の利用規約をもとにしているか。Team と Enterprise のメモリの初期設定は、Claude 101 では「オフで、オーナーが許可するとオンにできる」、ヘルプセンター（2026 年 10 月 31 日に確認）では「組織の設定はオン、メンバーは自分でオンにする」と書き方が違う |
