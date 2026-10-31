@@ -62,7 +62,7 @@ Claude の認定資格は、Claude を使った仕事の力を確かめる、Ant
 
 | 試験 | ページ | 状態 | 出題分野ごとのページ |
 |---|---|---|---|
-| Associate – Foundations | [概要と出題分野](./associate) | <span class="nowrap">公開済み</span> | 7 つのうち 5 つを公開 |
+| Associate – Foundations | [概要と出題分野](./associate) | <span class="nowrap">公開済み</span> | 7 つすべてを公開 |
 | Architect – Foundations | [概要と出題分野](./architect) | <span class="nowrap">公開済み</span> | 5 つのうち 1 つを執筆中 |
 | Developer – Foundations | 11 月 17 日の新しい試験ガイドを見てから作る | <span class="nowrap">準備中</span> | — |
 | Architect – Professional | 11 月 17 日の新しい試験ガイドを見てから作る | <span class="nowrap">準備中</span> | — |

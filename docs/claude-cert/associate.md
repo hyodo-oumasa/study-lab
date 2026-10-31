@@ -49,8 +49,8 @@ Architect – Foundations と違い、場面ごとの出題ではありません
 | 3 | [ガバナンス、リスク、責任ある利用](./associate-6-governance) | 6 | 15% | <span class="nowrap">公開済み</span> |
 | 4 | [プロンプト作成とタスク実行](./associate-1-prompting) | 1 | 14% | <span class="nowrap">公開済み</span> |
 | 5 | [製品とモデルの選択](./associate-3-product-model-selection) | 3 | 12% | <span class="nowrap">公開済み</span> |
-| 6 | 設定とナレッジ管理 | 5 | 12% | <span class="nowrap">準備中</span> |
-| 7 | トラブルシューティングと最適化 | 7 | 10% | <span class="nowrap">準備中</span> |
+| 6 | [設定とナレッジ管理](./associate-5-configuration-knowledge) | 5 | 12% | <span class="nowrap">公開済み</span> |
+| 7 | [トラブルシューティングと最適化](./associate-7-troubleshooting) | 7 | 10% | <span class="nowrap">公開済み</span> |
 
 ## 教材
 

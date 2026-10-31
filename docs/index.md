@@ -10,6 +10,8 @@ title: study-lab
 
 | 日付 | テーマ | 記事 |
 |---|---|---|
+| 2026-10-31 | Claude 認定資格 | [Associate 分野 7：トラブルシューティングと最適化](./claude-cert/associate-7-troubleshooting) |
+| 2026-10-31 | Claude 認定資格 | [Associate 分野 5：設定とナレッジ管理](./claude-cert/associate-5-configuration-knowledge) |
 | 2026-10-31 | Claude 認定資格 | [Associate 分野 3：製品とモデルの選択](./claude-cert/associate-3-product-model-selection) |
 | 2026-10-31 | Claude 認定資格 | [Associate 分野 1：プロンプト作成とタスク実行](./claude-cert/associate-1-prompting) |
 | 2026-10-29 | Claude 認定資格 | [Associate 分野 6：ガバナンス、リスク、責任ある利用](./claude-cert/associate-6-governance) |

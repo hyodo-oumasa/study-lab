@@ -87,7 +87,9 @@ export default defineConfig({
               { text: '分野 2：出力の評価と検証', link: '/claude-cert/associate-2-output-evaluation' },
               { text: '分野 3：製品とモデルの選択', link: '/claude-cert/associate-3-product-model-selection' },
               { text: '分野 4：ワークフロー統合とソリューション設計', link: '/claude-cert/associate-4-workflow-integration' },
+              { text: '分野 5：設定とナレッジ管理', link: '/claude-cert/associate-5-configuration-knowledge' },
               { text: '分野 6：ガバナンス、リスク、責任ある利用', link: '/claude-cert/associate-6-governance' },
+              { text: '分野 7：トラブルシューティングと最適化', link: '/claude-cert/associate-7-troubleshooting' },
             ],
           },
           {
