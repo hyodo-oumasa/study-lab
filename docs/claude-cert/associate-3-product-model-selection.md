@@ -104,9 +104,10 @@
 - **公式の教材と公式ドキュメント**
   - AIの能力と限界「ワーキングメモリ」の「重要なポイント」。
   - Claude 101 レッスン 2「Claudeの回答を改善する」（最悪の場合は新しいチャットで再開する）と「Claudeをパーソナライズする」（メモリ）。レッスン 3「反復の考え方」（最初からやり直すタイミングを見極める）。
+  - 準備コース レッスン 1 の確認テスト（決定事項と進捗の要約を貼り付けて、新しい会話で続ける）。
   - ヘルプセンター「How large is the context window on paid Claude plans?」「How do usage and length limits work?」「Use Claude's chat search and memory to build on previous context」。
 - **試験での見分け方**
-  - 長い会話で、前に伝えた条件が守られなくなった → 大事な点をまとめて、新しいチャットで始める。
+  - 長い会話で、前に伝えた条件が守られなくなった → 大事な点（決定事項と進捗）をまとめて、新しいチャットで始める。同じ会話で条件を伝え直すだけ、モデルを上位に変えるだけでは、劣化した会話は戻らない。
   - 毎回同じ資料を貼っている → プロジェクトのナレッジに入れる。
   - 「前の会話で直したのに、新しい会話でまた同じ間違いをする」 → Claude は訂正から学習しないので、指示をプロジェクトの指示やメモリに残す。
 - **紛らわしいもの**
@@ -189,9 +190,10 @@
 - [Use Claude's chat search and memory to build on previous context（Claude Help Center）](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 - [Claude 101（Claude Academy）](https://academy.claude.com/ja/courses/claude-101)：レッスン 2、3、5、10
 - [AIの能力と限界（Claude Academy）](https://academy.claude.com/ja/courses/ai-capabilities-and-limitations)：「ワーキングメモリ」
+- Claude Certified Associate – Foundations 準備コース（日本語版。Anthropic Partner Academy で公開）：レッスン 1 の確認テスト
 
 | 項目 | 内容 |
 |---|---|
-| 最終確認日 | 2026 年 10 月 31 日 |
+| 最終確認日 | 2026 年 11 月 5 日 |
 | 検証の状況 | 公式ドキュメントと Claude Academy の教材の内容をもとに書いている。claude.ai の画面は確かめていない |
-| 確かめていない内容 | 項目 4 の「要約する」のうち、自分で要点をまとめて新しいチャットに移すやり方は、公式の手順としては見つからなかった（自動の要約は公式）。無料のプランのコンテキストウィンドウの大きさ。試験ガイド（2026 年 7 月）が、どの版のモデルをもとにしているか |
+| 確かめていない内容 | 無料のプランのコンテキストウィンドウの大きさ。試験ガイド（2026 年 7 月）が、どの版のモデルをもとにしているか |
