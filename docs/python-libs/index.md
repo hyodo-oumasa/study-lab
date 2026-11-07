@@ -13,4 +13,6 @@
 
 ## ライブラリ一覧
 
-（準備中）
+| 記事 | 扱うライブラリ |
+|---|---|
+| [sentence-transformers と pgvector で、自分のメモを意味で検索する](./semantic-note-search) | sentence-transformers、pgvector、psycopg |

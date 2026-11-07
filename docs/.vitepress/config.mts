@@ -109,6 +109,13 @@ export default defineConfig({
         ],
       },
       {
+        text: 'Python ライブラリ',
+        items: [
+          { text: '概要とライブラリ一覧', link: '/python-libs/' },
+          { text: 'sentence-transformers と pgvector でメモを意味検索', link: '/python-libs/semantic-note-search' },
+        ],
+      },
+      {
         text: 'GitHub Actions / CI/CD',
         items: [
           { text: '概要', link: '/cicd/' },
