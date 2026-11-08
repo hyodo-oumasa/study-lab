@@ -146,12 +146,18 @@
 - **入力を整える**：整理された入力からは、整理された出力が返る。入力を整えるとは、必要な資料を加えるだけでなく、要らない資料を除くことでもある。次の 3 つで、たいていは足りる。
   1. 重複を除く。ほとんど同じ文書を何通も渡さない。
   2. 資料に**ラベル**（その資料が何かを示す見出しや説明）を付け、役割を分かるようにする。例：「これは承認済みの方針」「これらは下書き」。
+     - ラベルがないと、Claude には、どれが正式な版で、どれが参考や古い下書きなのかが分からない。食い違う内容を、同じ重みで混ぜてしまう。
+     - 付け方は、資料ごとに見出しを付けて区切るか、**XML タグ**（`<document>` のように、山かっこで囲んだ名前で、内容の始まりと終わりを示す目印）で囲む。公式のプロンプトの手引きは、資料を 1 つずつ `<document>` タグで囲み、出どころを `<source>`、本文を `<document_content>` のタグに入れる形を勧めている。
+     - 例：`<document>` の中に `<source>承認済みの方針（2026 年 10 月版）</source>` と本文を入れ、別の `<document>` に `<source>よくある質問（参考）</source>` と本文を入れる。
+     - 長い資料は、プロンプトの先頭に置き、質問はそのあと（最後）に書く。
   3. 質問に関係のない資料を除く。入力の雑音は、そのまま出力の雑音になる。
   - あわせて、ほしい出力の形（見出し、表の列など）をはっきり示す。そうすると、自分で並べ直す手間のない出力が返る。
   - 整理され、ラベルの付いた、必要最小限の入力のほうが、区別の付かない大量の資料よりも、すっきりした結果になる。
 
 - **公式ドキュメント**：ヘルプセンターの「What are artifacts and how do I use them?」。Claude がアーティファクトを作るのは、内容が大きくてそれだけで完結している（おおむね 15 行より長い）、会話の外で直したり使い直したりしそう、会話の文脈がなくても分かる、あとで見返しそう、という場合とされている。
-- **公式の教材**：Anthropic の公式教材「出力形式の選択：インライン、Artifacts、構造化、コード実行」。形式は、結果の使い道と、求められる信頼性で選ぶとしている。
+- **公式の教材**
+  - 準備コース「出力の評価と検証」のレッスン 7「出力形式の選択：インライン、Artifacts、構造化、コード実行」。形式は、結果の使い道と、求められる信頼性で選ぶとしている。
+  - Platform Docs の「Prompting best practices」の「Structure prompts with XML tags」と「Long context prompting」。資料を XML タグで囲み、出どころなどの情報を付ける形を示している。
 - **試験での見分け方**
   - 「あとで直す」「人に渡す」「ほかのツールで使う」が問題文にあれば、インラインではない形式を考える。
   - 数字が報告や意思決定に使われるなら、コード実行を選ぶ。「計算」という言葉がなくても、ファイルの数字を集計する作業なら同じ。
@@ -160,6 +166,7 @@
   - アーティファクトにするかどうかは、長さだけでは決まらない。会話の外で直したり使い直したりするか、会話の文脈がなくても分かるか、あとで見返すかも条件になる。
   - 「コード実行を使ったので、確かめなくてよい」は誤り。コードの考え方に誤りがあるかもしれない。確かめられるようになるだけで、正しさが保証されるのではない。
   - 「資料は多く渡すほどよい」は誤り。関係のない資料や重複は、出力の雑音になる。
+  - 入力が原因で出力が乱れているとき、上位のモデルに替える、新しい会話で同じ資料を貼り直す、要約を長くさせる、は原因に対処していない。入力を整える選択肢を選ぶ。
 - **アーティファクトの新しい仕組み**：2026 年 9 月 16 日より前にチャットで作ったアーティファクトは「レガシー」と呼ばれ、そのまま使えるが、新しくは作れない。今のアーティファクトは、テンプレート（ドキュメント、スライドなど）から作ることもできる。テンプレートから作ったものは、自分で直接打ち込んで直すこともできる。使うには、設定の「Capabilities」で、コード実行とファイル作成（新しい画面では「Create and edit files」）をオンにする。試験ガイド（2026 年 7 月）は、この仕組みより前に作られている。
 
 ## 確認問題
@@ -274,8 +281,8 @@ Claude 101 のレッスン 3、6、10 は、中身を読んで確かめました
 - [Anthropic Education Report: How people check Claude's work（Claude Academy）](https://academy.claude.com/tutorials/discernment-toolkit)
 - [What are artifacts and how do I use them?（Claude Help Center）](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
 - [What are artifacts and how do I use them?（Claude Help Center、2026 年 9 月以降の新しい記事）](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)：Edit and iterate、Start from a template
-- Anthropic の公式教材「出力形式の選択：インライン、Artifacts、構造化、コード実行」（日本語）
-- Claude Certified Associate – Foundations 準備コース（日本語版。Anthropic Partner Academy で公開）：演習「出力セットのトリアージ」
+- [Prompting best practices（Claude Platform Docs）](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)：Structure prompts with XML tags、Long context prompting
+- Claude Certified Associate – Foundations 準備コース（日本語版。Anthropic Partner Academy で公開）：「出力の評価と検証」のレッスン 7「出力形式の選択：インライン、Artifacts、構造化、コード実行」、演習「出力セットのトリアージ」、確認テスト
 - [Usage Policy（Anthropic）](https://www.anthropic.com/legal/aup)
 - [Claude 101（Claude Academy）](https://academy.claude.com/ja/courses/claude-101)：レッスン 3、6、10
 - [Certification FAQ（Anthropic Partner Academy）](https://anthropic-partners.skilljar.com/page/faq-certifications)
