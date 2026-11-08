@@ -16,3 +16,4 @@
 | 記事 | 扱うライブラリ |
 |---|---|
 | [sentence-transformers と pgvector で、自分のメモを意味で検索する](./semantic-note-search) | sentence-transformers、pgvector、psycopg |
+| [MCP サーバーとして、自分のメモの検索を Claude から呼べるようにする](./notes-search-mcp) | mcp（Python SDK） |

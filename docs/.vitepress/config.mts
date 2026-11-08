@@ -113,6 +113,7 @@ export default defineConfig({
         items: [
           { text: '概要とライブラリ一覧', link: '/python-libs/' },
           { text: 'sentence-transformers と pgvector でメモを意味検索', link: '/python-libs/semantic-note-search' },
+          { text: 'メモの検索を MCP サーバーにして Claude から呼ぶ', link: '/python-libs/notes-search-mcp' },
         ],
       },
       {
