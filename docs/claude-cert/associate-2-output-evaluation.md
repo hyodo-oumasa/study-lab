@@ -49,6 +49,7 @@
   - **ハルシネーション**：もっともらしい引用や主張が、事実に基づいていないことがある。数字、固有名詞、日付、引用、出典は、特に疑う。
   - **不整合**：出力の前半と後半、表と本文、資料と要約の間で、内容が食い違っていないかを見る。同じ依頼を何回か出して答えを比べ、答えが毎回違う部分は、ハルシネーションの疑いがある。
   - **バイアス**：一方の見方だけを取り上げていないか、特定の人や集団について決めつけた表現がないかを見る。
+    - 偏りは、プロンプト、前提の置き方、文章が作られるときの根っこのパターンから入ることがある。採用、評価、特定のグループへの連絡など、人に直接関わる出力では、人を公平に扱っているか、前提の置き方が結果を偏らせていないかを確かめる（準備コース「倫理的な観点：バイアス、公正性、透明性」。くわしくは [分野 6](./associate-6-governance) の項目 4）。
 - **公式ドキュメント**
   - ヘルプセンターの「Claude is providing incorrect or misleading responses. What's going on?」。権威がありそうに聞こえるが、事実に基づかない引用や主張を作ることがある、とされている。
   - 開発者向けドキュメントの「Reduce hallucinations」。同じプロンプトを何回か実行して出力を比べ、食い違いからハルシネーションに気づく方法が「Best-of-N verification」として紹介されている。
@@ -283,13 +284,13 @@ Claude 101 のレッスン 3、6、10 は、中身を読んで確かめました
 - [What are artifacts and how do I use them?（Claude Help Center）](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
 - [What are artifacts and how do I use them?（Claude Help Center、2026 年 9 月以降の新しい記事）](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)：Edit and iterate、Start from a template
 - [Prompting best practices（Claude Platform Docs）](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)：Structure prompts with XML tags、Long context prompting
-- Claude Certified Associate – Foundations 準備コース（日本語版。Anthropic Partner Academy で公開）：「出力の評価と検証」のレッスン 7「出力形式の選択：インライン、Artifacts、構造化、コード実行」、演習「出力セットのトリアージ」、確認テスト
+- Claude Certified Associate – Foundations 準備コース（日本語版。Anthropic Partner Academy で公開）：「出力の評価と検証」のレッスン 7「出力形式の選択：インライン、Artifacts、構造化、コード実行」、演習「出力セットのトリアージ」、確認テスト。「ガバナンス、リスク、責任ある利用」の「倫理的な観点：バイアス、公正性、透明性」
 - [Usage Policy（Anthropic）](https://www.anthropic.com/legal/aup)
 - [Claude 101（Claude Academy）](https://academy.claude.com/ja/courses/claude-101)：レッスン 3、6、10
 - [Certification FAQ（Anthropic Partner Academy）](https://anthropic-partners.skilljar.com/page/faq-certifications)
 
 | 項目 | 内容 |
 |---|---|
-| 最終確認日 | 2026 年 11 月 8 日 |
+| 最終確認日 | 2026 年 11 月 14 日 |
 | 検証の状況 | 公式ドキュメントの内容をもとに書いている |
-| 確かめていない内容 | バイアスの確かめ方と、読み手に合わせた直し方の公式の手順（項目 2 の「バイアス」と項目 5 の要点は、このサイトでまとめたもの）。claude.ai のウェブ検索の引用の表示と、アーティファクトの選んで直す操作（画面では確かめていない）。選んで直す操作が、スマートフォンのアプリや、ドキュメントと Markdown 以外のアーティファクトで使えるか（公式の記事に書かれていない）。Claude 101 のレッスン 3、6、10 以外の教材の中身。項目 3 の「選択肢が最後に何を見て判断するのかを確かめる」は、公式の内容からこのサイトで整理した見分け方。資料のラベルを XML タグでなく、ふつうの文や見出しで書いたときに、同じだけ効果があるか（公式の手引きは XML タグの形を示しているが、ほかの書き方との比べは書かれていない） |
+| 確かめていない内容 | バイアスの確かめ方の細かい手順（準備コースは、人に関わる出力で公平さと前提の偏りを確かめる、とまでは書いている）と、読み手に合わせた直し方の公式の手順（項目 5 の要点は、このサイトでまとめたもの）。claude.ai のウェブ検索の引用の表示と、アーティファクトの選んで直す操作（画面では確かめていない）。選んで直す操作が、スマートフォンのアプリや、ドキュメントと Markdown 以外のアーティファクトで使えるか（公式の記事に書かれていない）。Claude 101 のレッスン 3、6、10 以外の教材の中身。項目 3 の「選択肢が最後に何を見て判断するのかを確かめる」は、公式の内容からこのサイトで整理した見分け方。資料のラベルを XML タグでなく、ふつうの文や見出しで書いたときに、同じだけ効果があるか（公式の手引きは XML タグの形を示しているが、ほかの書き方との比べは書かれていない） |
