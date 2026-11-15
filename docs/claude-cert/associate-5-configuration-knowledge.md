@@ -75,6 +75,9 @@
 - **要点**
   - **ファイル名**をわかりやすくする。Claude はファイル名を手がかりに資料を探すので、「document1.pdf」より「Q4-2024-Brand-Guidelines.pdf」がよい。
   - ナレッジがコンテキストウィンドウの上限に近づくと、有料プランでは RAG に切り替わり、質問に関係する部分だけを取り込む（[分野 3](./associate-3-product-model-selection) の項目 1）。
+    - 切り替えは自動で、設定は要らない。ナレッジが減れば、自動で全部を読み込む形に戻る。RAG で動いているプロジェクトには、そのことを示す表示が出る。手で切り替える方法は、ヘルプセンターに書かれていない。
+    - RAG では、Claude はナレッジを全部目の前に置くのではなく、検索して探す。そのため、資料が多いと、聞きたい資料ではなく別の資料を拾うことがある。
+    - ヘルプセンターの勧め：わかりやすいファイル名にする、関係する資料を同じプロジェクトにまとめる、**質問の中で資料の名前を挙げて、検索の的を絞る**。
   - **コネクター**を使うと、Claude がつないだサービスの中を検索し、読み、許可していれば操作もする。コピーして貼り付ける代わりに、実際のファイルやメールについて質問できる。
   - コネクターには、クラウドのサービスにつなぐ**ウェブコネクター**と、デスクトップアプリで手元のファイルやアプリにつなぐ**デスクトップ拡張機能**がある。ディレクトリにないサービスは、カスタムコネクターとして加えられる（無料のプランは 1 つまで）。
   - **Google Drive の文書をナレッジに入れる**：私用（非公開）のプロジェクトでだけできる。共有したプロジェクトでは使えない。Google ドキュメントは Drive から直接読むので、いつも最新の版が使われる。読むのは文字だけで、文書の中の画像は読まない。
@@ -93,10 +96,11 @@
 - **公式の教材と公式ドキュメント**
   - Claude 101 レッスン 5「プロジェクト入門」の「ステップ3：ナレッジベースを構築する」と、そのプロのヒント（ファイル名）。
   - Claude 101 レッスン 8「ツールを接続する」の「主なポイント」「ウェブコネクタの設定」「セキュリティと権限」。
-  - ヘルプセンター「Use connectors to extend Claude's capabilities」「Use Google Workspace connectors」。
+  - ヘルプセンター「Use connectors to extend Claude's capabilities」「Use Google Workspace connectors」「Retrieval Augmented Generation (RAG) for Projects」（自動の切り替え、表示、最大 10 倍の容量、資料の名前を挙げる）。
   - 準備コース「設定とナレッジ管理」の「コネクタとアップロードされたナレッジ」（機能の境界、現場で見られる 2 つの落とし穴）。
 - **試験での見分け方**
   - 「最新の版を使いたい」「資料が Drive にある」なら、ファイルをアップロードし直すより、Google Drive から入れる選択肢を選ぶ（私用のプロジェクトの場合）。「ほかの人のメールも見られる」のような選択肢は誤り。
+  - 「ナレッジの多いプロジェクトで、特定の資料が答えに使われない」なら、最初に試すのは、質問の中でその資料の名前を挙げること。いちばん手軽で、症状（探す先がずれている）に直接効く。資料の全文をプロジェクトの指示に貼る（参考資料の置き場所の間違いで、毎回の会話が重くなる）、effort を上げる（考える深さは変わるが、探す先は変わらない）、新しいチャットで始める（新しいチャットでも起きているので、会話の長さの問題ではない）は外れ。
   - 「コネクターでの操作がうまくいかない」なら、不具合として報告する前に、そのコネクターでできる操作か、組織で許されている操作かを確かめる選択肢を選ぶ。
   - 「どのコネクターを足せばよいか分からない」（Team と Enterprise）なら、似た名前のものを自分で探すより、管理者に承認済みのものを確かめる選択肢を選ぶ。
 - **紛らわしいもの**
@@ -340,6 +344,7 @@
 - [Understanding Claude's personalization features（Claude Help Center）](https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features)
 - [Use connectors to extend Claude's capabilities（Claude Help Center）](https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities)
 - [Use Google Workspace connectors（Claude Help Center）](https://support.claude.com/en/articles/10166901-use-google-workspace-connectors)
+- [Retrieval Augmented Generation (RAG) for Projects（Claude Help Center）](https://support.claude.com/en/articles/11473015-retrieval-augmented-generation-rag-for-projects)
 - [How large is the context window on paid Claude plans?（Claude Help Center）](https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans)
 - [How do usage and length limits work?（Claude Help Center）](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)
 - [Use Claude's chat search and memory to build on previous context（Claude Help Center）](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
@@ -351,6 +356,6 @@
 
 | 項目 | 内容 |
 |---|---|
-| 最終確認日 | 2026 年 11 月 12 日 |
+| 最終確認日 | 2026 年 11 月 16 日 |
 | 検証の状況 | 公式ドキュメント、Claude Academy の教材、準備コースの内容をもとに書いている。claude.ai の画面は確かめていない |
 | 確かめていない内容 | 項目 3 の表の「向いているもの」と、項目 4 の「古い資料が残ると、Claude が古い情報を参照する」は、教材の内容からこのサイトで整理したもの。アップロードしたファイル（Google ドキュメント以外）を、元のファイルを直したときに自動で入れ替える方法。アカウントの指示とプロジェクトの指示が食い違ったときにどちらが優先されるか（公式の記事に書かれていない）。項目 2 のまとめの「直すのは、元のサービスの権限」は、コネクターが本人の権限で動くという公式の説明から、このサイトで整理したもの。コネクターができない操作や禁止された操作を Claude に頼んだときに、画面にどう出るか（公式の記事に書かれていない）。準備コースの「公開のディレクトリにつながる経路」が、画面のどの操作を指すか。準備コースの「Anthropic と組織のスキルは自動で更新され、アップロードしたカスタムスキルはアップロードし直すまで変わらない」（ヘルプセンターの記事に、そのとおりの説明はない）。1 つのプロジェクトのメモリだけをリセットする方法（ヘルプセンターの記事には、すべてを消すリセットと、プロジェクトを消すと消えることしか書かれていない） |
