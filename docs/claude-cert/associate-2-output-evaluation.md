@@ -40,7 +40,9 @@
 - **公式ドキュメント**
   - ヘルプセンターの「Claude is providing incorrect or misleading responses. What's going on?」。最新の情報がないことと、もっともらしい誤りを作ることが、誤りの例として挙げられている。
   - ヘルプセンターの「Upload files to Claude」。PDF のページ数と、図を読むかどうか。
+  - ヘルプセンターの「Use research on Claude」。モバイルアプリのリサーチは、ウェブだけを検索し、コネクターを使わない。エラーなどの印も出ない。
 - **試験での見分け方**：「正しいことしか書かれていないが、大事な点が抜けている」出力は、正確でも網羅的ではない。選択肢で「正確性を確かめる」と「網羅性を確かめる」が分かれていたら、場面で問われているのはどちらかを見る。
+- **試験での見分け方**：網羅性は、見た目の完成度ではなく、**道具が実際に届いた範囲**で判断する。たとえば、社内の資料も使うはずのリサーチの出典が、公開のウェブページばかりなら、社内の資料は一度も読まれていない。モバイルアプリのリサーチはコネクターを使わず、エラーも出ない（[分野 3](./associate-3-product-model-selection) の項目 1）。直し方は、ウェブ版かデスクトップアプリで同じリサーチをやり直すこと。出典のページを開いて確かめるのは正確性の確かめ方で、読まれなかった資料は補えない。
 - **紛らわしいもの**：網羅性は「長いほどよい」ではない。依頼に要らない内容が多いことは、網羅性の高さではなく、項目 6 の「選別」の問題。
 
 ## 項目 2　ハルシネーション、不整合、バイアスを特定する
@@ -280,6 +282,7 @@ Claude 101 のレッスン 3、6、10 は、中身を読んで確かめました
 - [Claude is providing incorrect or misleading responses. What's going on?（Claude Help Center）](https://support.claude.com/en/articles/8525154-claude-is-providing-incorrect-or-misleading-responses-what-s-going-on)
 - [Enable and use web search（Claude Help Center）](https://support.claude.com/en/articles/10684626-enable-and-use-web-search)
 - [Upload files to Claude（Claude Help Center）](https://support.claude.com/en/articles/8241126-upload-files-to-claude)
+- [Use research on Claude（Claude Help Center）](https://support.claude.com/en/articles/11088861-use-research-on-claude)
 - [Anthropic Education Report: How people check Claude's work（Claude Academy）](https://academy.claude.com/tutorials/discernment-toolkit)
 - [What are artifacts and how do I use them?（Claude Help Center）](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
 - [What are artifacts and how do I use them?（Claude Help Center、2026 年 9 月以降の新しい記事）](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them)：Edit and iterate、Start from a template
@@ -291,6 +294,6 @@ Claude 101 のレッスン 3、6、10 は、中身を読んで確かめました
 
 | 項目 | 内容 |
 |---|---|
-| 最終確認日 | 2026 年 11 月 14 日 |
+| 最終確認日 | 2026 年 11 月 16 日 |
 | 検証の状況 | 公式ドキュメントの内容をもとに書いている |
 | 確かめていない内容 | バイアスの確かめ方の細かい手順（準備コースは、人に関わる出力で公平さと前提の偏りを確かめる、とまでは書いている）と、読み手に合わせた直し方の公式の手順（項目 5 の要点は、このサイトでまとめたもの）。claude.ai のウェブ検索の引用の表示と、アーティファクトの選んで直す操作（画面では確かめていない）。選んで直す操作が、スマートフォンのアプリや、ドキュメントと Markdown 以外のアーティファクトで使えるか（公式の記事に書かれていない）。Claude 101 のレッスン 3、6、10 以外の教材の中身。項目 3 の「選択肢が最後に何を見て判断するのかを確かめる」は、公式の内容からこのサイトで整理した見分け方。資料のラベルを XML タグでなく、ふつうの文や見出しで書いたときに、同じだけ効果があるか（公式の手引きは XML タグの形を示しているが、ほかの書き方との比べは書かれていない） |
