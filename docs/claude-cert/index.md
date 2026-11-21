@@ -49,6 +49,8 @@ Claude の認定資格は、Claude を使った仕事の力を確かめる、Ant
 
 試験は日本語でも受けられますが、問題は英語から訳されたものです。訳の違いに気づけるように、各ページには、出題分野でよく使われる用語の英語と日本語を並べた表を付けます。
 
+Claude の機能名（project、knowledge、skill、connector、memory、artifact、Research、web search、code execution、incognito chat など）は、英語の名前で書きます。各節で最初に出るところには、「project（プロジェクト）」のように日本語の名前を添えます。
+
 ## 受ける順番
 
 | 順番 | 試験 | この順番にした理由 |
