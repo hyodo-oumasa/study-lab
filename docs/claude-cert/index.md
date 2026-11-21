@@ -65,7 +65,7 @@ Claude の機能名（project、knowledge、skill、connector、memory、artifac
 | 試験 | ページ | 状態 | 出題分野ごとのページ |
 |---|---|---|---|
 | Associate – Foundations | [概要と出題分野](./associate) | <span class="nowrap">公開済み</span> | [分野 1](./associate-1-prompting)<br>[分野 2](./associate-2-output-evaluation)<br>[分野 3](./associate-3-product-model-selection)<br>[分野 4](./associate-4-workflow-integration)<br>[分野 5](./associate-5-configuration-knowledge)<br>[分野 6](./associate-6-governance)<br>[分野 7](./associate-7-troubleshooting) |
-| Architect – Foundations | [概要と出題分野](./architect) | <span class="nowrap">公開済み</span> | [分野 3](./architect-3-claude-code)（5 つのうち 1 つを執筆中） |
+| Architect – Foundations | [概要と出題分野](./architect) | <span class="nowrap">公開済み</span> | [分野 3](./architect-3-claude-code)（5 つのうち 1 つを公開済み。ほかの分野は、[概要と出題分野](./architect)の課題の一覧に、準備中と書いています） |
 | Developer – Foundations | 11 月 17 日の新しい試験ガイドを見てから作る | <span class="nowrap">準備中</span> | — |
 | Architect – Professional | 11 月 17 日の新しい試験ガイドを見てから作る | <span class="nowrap">準備中</span> | — |
 
